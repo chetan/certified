@@ -57,6 +57,18 @@ certified CN="localhost" +"127.0.0.1"
 
 The [wiki](https://github.com/rcrowley/certified/wiki) further documents common usage patterns and how to use your CA with various browsers, operating systems, and programming languages.
 
+Packaging
+---------
+
+Ubuntu packages (`deb`) can be built using Docker:
+
+```sh
+docker build -t certified_xenial .
+docker run -v $(pwd):/tmp/certified -it certified_xenial
+```
+
+To build for other versions of Ubuntu, simply change the `FROM` line in the `Dockerfile` accordingly.
+
 TODO
 ----
 
